@@ -68,7 +68,7 @@ func main() {
 		var results []CodeLog
 		for rows.Next() {
 			var l CodeLog
-			rows.Scan(&l.ID, &l.User, l.Password, &l.Timestamp)
+			rows.Scan(&l.ID, &l.User, &l.Password, &l.Timestamp)
 			results = append(results, l)
 		}
 		return c.JSON(http.StatusOK, results)
