@@ -17,7 +17,7 @@ WORKDIR /root/
 # Copy the Go binary
 COPY --from=backend-builder /app/server .
 # Copy the React build files
-COPY dist/ .
+COPY dist/ ./dist
 #COPY --from=frontend-builder /app/dist ./dist
 
 # Render provides a PORT environment variable
